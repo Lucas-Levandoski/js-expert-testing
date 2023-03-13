@@ -48,12 +48,7 @@ class File {
     rows = rows.filter(Boolean);
 
     const users = rows.map((row) => {
-      let [id, name, profession, age] = row.split(",");
-
-      id = id.trim();
-      name = name.trim();
-      profession = profession.trim();
-      age = age.trim();
+      const [id, name, profession, age] = row.split(",").map((item) => item.trim());
 
       return { id, name, profession, age };
     })
