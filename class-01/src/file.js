@@ -14,6 +14,8 @@ class File {
     const { error, valid } = this.validate(content)
 
     if (!valid) throw new Error(error);
+
+    return this.parseCSVToJSON(content);
   }
 
   static validate(csvString, options = DEFAULT_OPTIONS) {
@@ -36,6 +38,27 @@ class File {
         valid: false
       })
     }
+
+    return { valid: true }
+  }
+
+  static parseCSVToJSON(csvString) {
+    let [, ...rows] = csvString.split(/\r?\n/);
+
+    rows = rows.filter(Boolean);
+
+    const users = rows.map((row) => {
+      let [id, name, profession, age] = row.split(",");
+
+      id = id.trim();
+      name = name.trim();
+      profession = profession.trim();
+      age = age.trim();
+
+      return { id, name, profession, age };
+    })
+
+    return users;
   }
 }
 
