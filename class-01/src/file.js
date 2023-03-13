@@ -17,11 +17,11 @@ class File {
   }
 
   static validate(csvString, options = DEFAULT_OPTIONS) {
-    let [headers, ...rows] = csvString.split(/\r?\n/);
+    let [header, ...rows] = csvString.split(/\r?\n/);
 
     rows = rows.filter(Boolean);
 
-    let isHeaderValid = arraysEqual(headers.split(',').sort(), options.fields.sort());
+    let isHeaderValid = arraysEqual(header.split(',').sort(), options.fields.sort());
 
     if (!rows.length) {
       return ({
