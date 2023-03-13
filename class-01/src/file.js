@@ -23,7 +23,7 @@ class File {
 
     let isHeaderValid = arraysEqual(header.split(',').sort(), options.fields.sort());
 
-    if (!rows.length) {
+    if (!rows.length || rows.length > options.maxLines) {
       return ({
         error: error.FILE_LENGTH_ERROR_MESSAGE,
         valid: false
