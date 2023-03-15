@@ -10,5 +10,8 @@
     "node": "19"
   },
   "author": "lls",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "sinon": "^15.0.2"
+  }
 }
