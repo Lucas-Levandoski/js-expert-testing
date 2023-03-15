@@ -7,7 +7,6 @@ const DEFAULT_OPTIONS = {
   fields: ["id", "name", "profession", "age"],
 }
 
-
 class File {
   static async csvToJSON(filePath) {
     const content = await readFile(filePath, "utf-8");
