@@ -1,11 +1,10 @@
 class Service {
-  async makeRequest(url) {
-
+  static async makeRequest(url) {
+    return fetch(url).then(res => (res.json()));
   }
 
-
-  async getPlanets() {
-
+  static async getPlanets(url) {
+    return fetch(url).then(res => (res.json()));
   }
 }
 
