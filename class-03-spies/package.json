@@ -1,0 +1,17 @@
+{
+  "name": "spies",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "node ./src/service.test.js"
+  },
+  "engines": {
+    "node": "19"
+  },
+  "author": "lls",
+  "license": "ISC",
+  "devDependencies": {
+    "sinon": "^15.0.2"
+  }
+}
