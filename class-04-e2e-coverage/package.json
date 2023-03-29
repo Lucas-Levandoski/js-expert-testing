@@ -1,0 +1,17 @@
+{
+  "name": "e2eCoverage",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "node ./src/fibonacci.test.js"
+  },
+  "engines": {
+    "node": "19"
+  },
+  "author": "lls",
+  "license": "ISC",
+  "devDependencies": {
+    "sinon": "^15.0.2"
+  }
+}
