@@ -1,10 +1,11 @@
 {
-  "name": "e2eCoverage",
+  "name": "e2e_coverage",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "src/api.js",
   "scripts": {
-    "test": "node ./src/fibonacci.test.js"
+    "start": "node ./src/api.js",
+    "test": "mocha -w src/**.test.js"
   },
   "engines": {
     "node": "19"
@@ -12,6 +13,7 @@
   "author": "lls",
   "license": "ISC",
   "devDependencies": {
+    "mocha": "^10.2.0",
     "sinon": "^15.0.2"
   }
 }
