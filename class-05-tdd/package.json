@@ -5,8 +5,7 @@
   "main": "src/api.js",
   "scripts": {
     "start": "node ./src/api.js",
-    "test:dev": "mocha -w src/**.test.js",
-    "test:cov": "npx nyc npx mocha src/**.test.js"
+    "seed": "node ./seed"
   },
   "engines": {
     "node": "19"
@@ -14,6 +13,7 @@
   "author": "lls",
   "license": "ISC",
   "devDependencies": {
+    "faker": "^5.5.3",
     "mocha": "^10.2.0",
     "nyc": "^15.1.0",
     "sinon": "^15.0.2",
