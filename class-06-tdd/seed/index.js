@@ -19,6 +19,8 @@ const carCategory = new CarCategory({
 })
 
 const cars = [];
+const customers = [];
+
 for(let index=0; index<=ITEMS_AMOUNT; index++) {
   const car = new Car({
     id: faker.datatype.uuid(),
@@ -31,6 +33,15 @@ for(let index=0; index<=ITEMS_AMOUNT; index++) {
   carCategory.carIds.push(car.id);
 
   cars.push(car);
+
+
+  const customer = new Customer({
+    id: faker.datatype.uuid(),
+    name: faker.name.firstName(),
+    age: faker.datatype.number()
+  })
+
+  customers.push(customer);
 }
 
 const write = (filename, data) => writeFile(join(seederBaseFolder, filename), JSON.stringify(data));
@@ -38,7 +49,9 @@ const write = (filename, data) => writeFile(join(seederBaseFolder, filename), JS
 ;(async ()=> {
   await write('cars.json', cars);
   await write('carCategory.json', carCategory);
+  await write('customers.json', customers);
 
   console.log('cars', cars);
   console.log('carCategory', carCategory);
+  console.log('customers', customers);
 })()

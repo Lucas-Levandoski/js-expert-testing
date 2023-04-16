@@ -1,10 +1,1 @@
-{
-  "id": "0d5f09e0-206d-4fc7-95c9-cf4be6c56e71",
-  "name": "Wagon",
-  "carIds": [
-    "145e1fb1-2ce7-4d99-9e59-6bc438dab8e7",
-    "1811d184-325b-42b9-8290-7faf055b72ab",
-    "4919a2ba-ccc3-4643-8ff2-e0235c92bbb1"
-  ],
-  "price": "66.79"
-}
+{"id":"dfa2987f-e035-43ec-9513-53d09f92fa29","name":"Wagon","carIds":["88c8ca9b-6b2a-4b75-9808-04f3e1386fe9","fe63ba65-1061-4d89-a920-9e22297d4951","0ae1e16a-6b1f-43dd-89ad-c7917c5889ff"],"price":"53.87"}
