@@ -1,10 +1,10 @@
-const Base = require('./base');
+const Base = require('./base/base');
 
 class CarCategory extends Base {
-  constructor({id, name, carId, price}) {
+  constructor({id, name, carIds, price}) {
     super({id, name});
 
-    this.carId = carId;
+    this.carIds = carIds;
     this.price = price;
   }
 
